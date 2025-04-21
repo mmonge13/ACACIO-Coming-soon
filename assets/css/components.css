@@ -37,13 +37,7 @@
   left: 40%;
   z-index: 1100;
   text-decoration: none;
-  /* background: var(--frosted-glass); 
-  backdrop-filter: blur(10px); 
-  border: 1px solid rgba(255, 255, 255, 0.3); 
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  padding: 1.2rem 0.8rem; /* Espaciado interno para el efecto */
-  
+  padding: 1.2rem 0.8rem;
 }
 
 .fixed-logo img {
