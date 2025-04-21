@@ -142,7 +142,7 @@ p {
   gap: 1rem;
   grid-auto-flow: column; /* Organiza los elementos en una fila horizontal */
   grid-template-columns: repeat(3, 1fr); /* Ajusta el ancho de las columnas */
-  overflow-x: auto; /* Permite el desplazamiento horizontal si hay demasiados elementos */
+  /* overflow-x: auto;  */
   padding-bottom: 1rem;
   padding: 1rem;
 }
@@ -152,8 +152,8 @@ p {
   flex-direction: column;
   justify-content: space-between; /* Distribuye el contenido de manera uniforme */
   align-items: center;
-  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  background: var(--frosted-glass); /* Fondo semitransparente */
+  /* backdrop-filter: blur(10px); Efecto de desenfoque */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
   border-radius: 1rem; /* Bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
@@ -186,7 +186,7 @@ p {
 
 .social-cards .card p {
   font-size: 1rem;
-  color: #ECEFF4; /* Texto semitransparente */
+  color: #9b9b9bb8; /* Texto semitransparente */
   margin-bottom: 1rem;
 }
 
@@ -232,6 +232,11 @@ body.dark-mode .social-cards .card .btn {
 =================================================== */
 
 @media (max-width: 768px) {
+
+  .fixed-logo img {
+    width: 2rem;
+  }
+
   .social-cards {
     grid-auto-flow: row; /* Cambia el flujo a vertical */
     grid-template-columns: 1fr; /* Cada tarjeta ocupa toda la fila */
@@ -242,4 +247,20 @@ body.dark-mode .social-cards .card .btn {
     min-height: 12rem; /* Reduce la altura mínima en dispositivos móviles */
     padding: 1rem; /* Reduce el padding para ahorrar espacio */
   }
+
+  .social-cards .card i {
+    margin-bottom: 0.1rem;
+  }
+  
+  .social-cards .card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-cards .card p {
+    margin-bottom: 0.5rem;
+  }
+  .social-cards .card .btn {
+    padding-bottom: 0.1rem;
+  }
+
 }
