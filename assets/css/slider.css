@@ -1,0 +1,87 @@
+/* ===================================================
+     SLIDER DE SERVICIOS
+  =================================================== */
+.services-slider {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1.5rem;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.service-item .icon {
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Color del ícono */
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.service-item p {
+  font-size: 1.3rem;
+  color: #ECEFF4; /* Texto semitransparente */
+  margin-bottom: 1rem;
+}
+
+.service-item.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+.slider-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--primary-color);
+}
+
+body.dark-mode .service-item {
+  /* background: #2c2c2c; */
+  color: var(--text-light);
+}
+
+/* ===================================================
+   ICONOS
+=================================================== */
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}

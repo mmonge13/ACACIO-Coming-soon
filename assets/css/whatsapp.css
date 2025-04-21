@@ -1,0 +1,27 @@
+/* ===================================================
+     BOTON DE WHATSAPP
+  =================================================== */
+  /* Botón de WhatsApp flotante */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .whatsapp-btn img {
+    display: block;
+    width: 40px; 
+    height: auto;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1ebea5;
+  }

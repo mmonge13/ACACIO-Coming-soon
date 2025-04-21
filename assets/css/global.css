@@ -1,0 +1,48 @@
+/* ===================================================
+   VARIABLES GLOBALES
+=================================================== */
+:root {
+    font-size: 16px;
+    --primary-color: #0077ff;
+    --primary-dark: #005fcc;
+    --bg-light: #f4f4f4;
+    --bg-dark: #1c1c1c;
+    --text-light: #eee;
+    --text-dark: #0d2738d0;
+    --frosted-glass: rgba(255, 255, 255, 0.3);
+    --dark-frosted-glass: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* ===================================================
+     RESET Y ESTILOS BÁSICOS
+  =================================================== */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+    background: url('/assets/images/emma-francis-vpHCfunwDrQ-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-light);
+    scroll-behavior: smooth;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* ===================================================
+     MODO OSCURO
+  =================================================== */
+  body.dark-mode {
+    background: url('assets/images/emma-francis-vpHCfunwDrQ-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-dark);
+  }
+  
+  body.dark-mode .left-panel {
+    background: var(--dark-frosted-glass);
+  }

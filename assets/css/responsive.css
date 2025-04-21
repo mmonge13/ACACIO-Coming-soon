@@ -1,0 +1,46 @@
+/* ===================================================
+     MEDIA QUERIES PARA RESPONSIVE DESIGN
+  =================================================== */
+  @media (max-width: 768px) {
+    .split-layout {
+      flex-direction: column;
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%; 
+      height: auto; 
+    }
+  
+    .vertical-text {
+      display: none;
+    }
+  
+    .toggle-dark-mode {
+      top: 1rem;
+      right: 0.5rem;
+      font-size: 0.875rem;
+    }
+  
+    .fixed-logo img {
+      width: 10rem;
+    }
+  
+    section {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .cta-buttons .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.875rem;
+    }
+  
+    .contact-form .btn.submit {
+      font-size: 0.875rem;
+    }
+  }

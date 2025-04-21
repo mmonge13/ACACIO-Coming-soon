@@ -1,0 +1,218 @@
+/* ===================================================
+     BOTÓN DE MODO OSCURO
+  =================================================== */
+.toggle-dark-mode {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: var(--frosted-glass);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.3rem 0.0rem 0.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.toggle-dark-mode:hover {
+  background: var(--dark-frosted-glass);
+  transform: scale(1.1);
+}
+
+.toggle-dark-mode .icon {
+  font-size: 1.2rem;
+}
+
+/* ===================================================
+     LOGO FIJO
+  =================================================== */
+.fixed-logo {
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  z-index: 1100;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+  border-radius: 1rem; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 2.5rem 1rem; /* Espaciado interno para el efecto */
+  
+}
+
+.fixed-logo img {
+  width: 8rem;
+  height: auto;
+  border-radius: 0.5rem; /* Bordes ligeramente redondeados para la imagen */
+}
+
+
+/* ===================================================
+   TIPOGRAFÍA Y TEXTOS
+=================================================== */
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.section-number {
+  font-size: 8rem !important; /* Tamaño del texto */
+  font-weight: bold; /* Negrita para resaltar */
+  color: transparent; /* Hace el texto transparente */
+  background: linear-gradient(45deg, var(--text-dark), rgba(255, 255, 255, 0.4)); /* Degradado semitransparente */
+  -webkit-background-clip: text; /* Aplica el fondo solo al texto */
+  background-clip: text; /* Aplica el fondo solo al texto (soporte adicional) */
+  display: block; /* Asegura que esté en su propia línea */
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamaño del texto */
+  font-weight: 600; /* Negrita para resaltar */
+  color: var(--text-dark); /* Cambia el color al definido en la variable */
+  /* margin-bottom: 1.5rem; */
+  /* line-height: 1.3;  */
+}
+
+h2 {
+  font-size: 3.5rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita para resaltar */
+  color: #fff; /* Cambia el color al definido en la variable */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* margin-bottom: 1.5rem; */
+  /* line-height: 1.3; */
+}
+
+p {
+  font-size: 1.5rem; /* Tamaño del texto */
+  color: #ECEFF4; /* Cambia el color al definido en la variable */
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+
+
+/* ===================================================
+   BOTONES
+=================================================== */
+.cta-buttons .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn.primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn.primary:hover,
+.btn.secondary:hover {
+  background: var(--primary-dark);
+}
+
+/* ===================================================
+   follow-us component
+=================================================== */
+
+.social-cards {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column; /* Organiza los elementos en una fila horizontal */
+  grid-template-columns: repeat(3, 1fr); /* Ajusta el ancho de las columnas */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si hay demasiados elementos */
+  padding-bottom: 1rem;
+  padding: 1rem;
+}
+
+.social-cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+  border-radius: 1rem; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 20rem; /* Asegura que todas las tarjetas tengan la misma altura mínima */
+}
+
+.social-cards .card:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.social-cards .card .bg {
+  display: none; /* Si no es necesario, oculta el fondo adicional */
+}
+
+.social-cards .card i {
+  font-size: 2.5rem;
+  color: var(--text-dark); /* Color del ícono */
+  margin-bottom: 1rem;
+}
+
+.social-cards .card h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.social-cards .card p {
+  font-size: 1rem;
+  color: #ECEFF4; /* Texto semitransparente */
+  margin-bottom: 1rem;
+}
+
+.social-cards .card .btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social-cards .card .btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .social-cards {
+    grid-auto-flow: row; /* Cambia el flujo a vertical */
+    grid-template-columns: 1fr; /* Cada tarjeta ocupa toda la fila */
+    overflow-x: hidden; /* Desactiva el desplazamiento horizontal */
+  }
+
+  .social-cards .card {
+    min-height: 12rem; /* Reduce la altura mínima en dispositivos móviles */
+    padding: 1rem; /* Reduce el padding para ahorrar espacio */
+  }
+}

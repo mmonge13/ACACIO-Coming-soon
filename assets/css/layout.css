@@ -1,0 +1,59 @@
+/* ===================================================
+     ESTRUCTURA LAYOUT DIVIDIDO
+  =================================================== */
+  .split-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* ===================================================
+     PANEL IZQUIERDO CON SCROLL Y FONDO DESENFOCADO
+     (FROSTED GLASS)
+  =================================================== */
+  
+  .left-panel {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    backdrop-filter: blur(12px);
+    background: var(--frosted-glass);
+    /* border-radius: 0.2rem; */
+    z-index: 1;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
+    box-shadow: 0 4px 56px rgba(0, 0, 0, 0.3);
+  }
+  
+  .left-panel::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  
+  
+  /* ===================================================
+     PANEL DERECHO CON IMAGEN DE FONDO Y TEXTO VERTICAL
+  =================================================== */
+  .right-panel {
+    width: 50%;
+    height: 100vh;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    position: sticky;
+    top: 0;
+    filter: brightness(0.8);
+    position: relative;
+  }
+  
+  .vertical-text {
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;          
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl; 
+    text-transform: uppercase; 
+    letter-spacing: 0.2em;     
+    font-size: 2.2rem;           
+    color: #fff; 
+  }
