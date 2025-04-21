@@ -152,7 +152,7 @@ p {
   flex-direction: column;
   justify-content: space-between; /* Distribuye el contenido de manera uniforme */
   align-items: center;
-  background: var(--frosted-glass); /* Fondo semitransparente */
+  background: rgba(238, 238, 238, 0.8); /* Fondo semitransparente */
   /* backdrop-filter: blur(10px); Efecto de desenfoque */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
   border-radius: 1rem; /* Bordes redondeados */
@@ -186,8 +186,10 @@ p {
 
 .social-cards .card p {
   font-size: 1rem;
-  color: #9b9b9bb8; /* Texto semitransparente */
+  font-weight: 600;
+  color: #f5f9ff; /* Texto semitransparente */
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .social-cards .card .btn {
