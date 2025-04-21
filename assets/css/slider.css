@@ -9,23 +9,23 @@
 }
 
 .service-item {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--frosted-glass);
+  /* backdrop-filter: blur(10px); */
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  /* border-radius: 1rem; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   text-align: center;
   padding: 1.5rem;
   position: absolute;
   width: 100%;
   opacity: 0;
   transform: translateX(100%);
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .service-item:hover {
   transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  /* box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); */
 }
 
 .service-item .icon {
@@ -36,7 +36,7 @@
 
 .service-item h3 {
   font-size: 1.5rem;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
@@ -50,6 +50,12 @@
   opacity: 1;
   transform: translateX(0);
   position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-item.previous {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .slider-controls {
@@ -66,10 +72,14 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .dot.active {
   background: var(--primary-color);
+  transform: scale(1.3); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 0 10px var(--primary-color);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 body.dark-mode .service-item {
@@ -84,4 +94,31 @@ body.dark-mode .service-item {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+
+/* ===================================================
+   MODO OSCURO
+=================================================== */
+body.dark-mode .service-item h3 {
+  color: var(--text-dark); /* Cambia al color oscuro */
+}
+
+/* ===================================================
+   Responsive Design
+=================================================== */
+
+@media (max-width: 768px) {
+  .service-item {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .service-item .icon {
+    font-size: 2rem;
+  }
+
+  .services-slider {
+    overflow-x: scroll; /* Permite desplazamiento horizontal si es necesario */
+  }
 }

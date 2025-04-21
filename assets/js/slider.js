@@ -3,6 +3,7 @@
 // ================================================
 const serviceItems = document.querySelectorAll(".service-item");
 const dotsContainer = document.getElementById("slider-dots");
+const sliderContainer = document.querySelector(".services-slider");
 let current = 0;
 let autoplayInterval;
 
@@ -13,6 +14,7 @@ function updateSlider() {
       "active",
       index === current
     );
+    dotsContainer.children[index].setAttribute("aria-selected", index === current);
   });
 }
 
@@ -24,6 +26,9 @@ function goToSlide(index) {
 serviceItems.forEach((_, index) => {
   const dot = document.createElement("span");
   dot.classList.add("dot", index === 0 && "active");
+  dot.setAttribute("role", "button");
+  dot.setAttribute("aria-label", `Slide ${index + 1}`);
+  dot.setAttribute("aria-selected", index === 0);
   dot.addEventListener("click", () => {
     goToSlide(index);
     clearInterval(autoplayInterval);
@@ -38,6 +43,28 @@ function startAutoplay() {
     updateSlider();
   }, 4000);
 }
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    current = (current + 1) % serviceItems.length;
+    updateSlider();
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  } else if (event.key === "ArrowLeft") {
+    current = (current - 1 + serviceItems.length) % serviceItems.length;
+    updateSlider();
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+});
+
+sliderContainer.addEventListener("mouseenter", () => {
+  clearInterval(autoplayInterval);
+});
+
+sliderContainer.addEventListener("mouseleave", () => {
+  startAutoplay();
+});
 
 updateSlider();
 startAutoplay();

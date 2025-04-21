@@ -17,7 +17,7 @@
   }
   
   .contact-form .btn.submit {
-    background: var(--text-dark);
+    background: var(--primary-color);
     color: #ECEFF4;
     font-weight: 700;
     border: none;
@@ -30,3 +30,10 @@
     background: #ECEFF4;
     color: var(--text-dark);
   }
+
+  /* ===================================================
+   MODO OSCURO
+=================================================== */
+body.dark-mode .contact-form .btn.submit {
+  background: var(--primary-dark); /* Cambia al color oscuro */
+}

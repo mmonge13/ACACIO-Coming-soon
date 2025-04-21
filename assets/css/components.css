@@ -102,19 +102,7 @@ p {
   line-height: 1.5; /* Espaciado entre líneas */
 }
 
-/* ===================================================
-   MODO OSCURO
-=================================================== */
-body.dark-mode .section-number {
-  color: var(--text-dark); /* Cambia al color oscuro */
-}
 
-body.dark-mode h1{
-  color: var(--text-dark); /* Cambia al color oscuro */
-}
-body.dark-mode h2 {
-  color: var(--text-light); /* Cambia al color oscuro */
-}
 
 
 /* ===================================================
@@ -186,13 +174,13 @@ body.dark-mode h2 {
 
 .social-cards .card i {
   font-size: 2.5rem;
-  color: var(--text-dark); /* Color del ícono */
+  color: var(--primary-color); /* Color del ícono */
   margin-bottom: 1rem;
 }
 
 .social-cards .card h3 {
   font-size: 1.5rem;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
@@ -203,7 +191,7 @@ body.dark-mode h2 {
 }
 
 .social-cards .card .btn {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--primary-color);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.5rem 1rem;
@@ -216,6 +204,32 @@ body.dark-mode h2 {
   background: rgba(255, 255, 255, 0.5);
   color: var(--text-dark);
 }
+
+/* ===================================================
+   MODO OSCURO
+=================================================== */
+body.dark-mode .section-number {
+  color: var(--text-dark); /* Cambia al color oscuro */
+}
+
+body.dark-mode h1{
+  color: var(--text-dark); /* Cambia al color oscuro */
+}
+body.dark-mode h2 {
+  color: var(--text-light); /* Cambia al color oscuro */
+}
+
+body.dark-mode .social-cards .card i,
+body.dark-mode .social-cards .card h3 {
+  color: var(--primary-dark); 
+}
+body.dark-mode .social-cards .card .btn {
+  background: var(--primary-dark);
+}
+
+/* ===================================================
+   RESPOSIVO
+=================================================== */
 
 @media (max-width: 768px) {
   .social-cards {
