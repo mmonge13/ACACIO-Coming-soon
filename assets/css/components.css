@@ -228,6 +228,9 @@ body.dark-mode .social-cards .card .btn {
 =================================================== */
 
 @media (max-width: 768px) {
+  h2{
+    font-size: 2.5rem; /* Tamaño del texto */
+  }
 
   .fixed-logo img {
     width: 2rem;
